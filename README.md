@@ -85,7 +85,7 @@ I will improve and debug it but, as the ISC license proclaim, this software is p
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/giano/pdflayer/blob/master/contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -95,7 +95,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Stefano Valicchia** - *Initial work* - [giano](https://github.com/giano/pdflayer)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/giano/pdflayer/contributors) who participated in this project.
 
 ## License
 
