@@ -18,7 +18,7 @@ require('any-promise/register/bluebird'); //Registering Bluebird as my preferred
 
 const PdfLayer = require('pdflayer');
 const pdfLayer = new PdfLayer({
-	apiKey: 'YOUR API KEY'
+	access_key: 'YOUR API KEY'
 });
 const express = require('express');
 const app = express();
@@ -63,7 +63,7 @@ The "main config options" (the ones you pass when you create an instance of the 
 {
 	"apiUrl": "http://api.pdflayer.com/api/convert",
 	"method": "POST",
-	"apiKey": "YOUR API KEY"
+	"access_key": "YOUR API KEY"
 }
 ```
 
