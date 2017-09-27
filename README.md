@@ -85,7 +85,7 @@ I will improve and debug it but, as the ISC license proclaim, this software is p
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/giano/pdflayer/blob/master/contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
