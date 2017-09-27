@@ -61,9 +61,9 @@ The "main config options" (the ones you pass when you create an instance of the 
 ```json
 
 {
-	apiUrl: 'http://api.pdflayer.com/api/convert',
-	method: 'POST',
-	apiKey: 'YOUR API KEY'
+	"apiUrl": "http://api.pdflayer.com/api/convert",
+	"method": "POST",
+	"apiKey": "YOUR API KEY"
 }
 ```
 
