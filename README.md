@@ -62,7 +62,7 @@ The "main config options" (the ones you pass when you create an instance of the 
 ```json
 
 {
-	"apiUrl": "http://api.pdflayer.com/api/convert",
+	"api_url": "http://api.pdflayer.com/api/convert",
 	"method": "POST",
 	"access_key": "YOUR API KEY"
 }
@@ -70,7 +70,7 @@ The "main config options" (the ones you pass when you create an instance of the 
 
 in addition to the __DEFAULT_REQUEST_KEYS__ list.
 
-Set the apiUrl to 'https://api.pdflayer.com/api/convert' if you want encription and you have a paid plan.
+Set the api_url to 'https://api.pdflayer.com/api/convert' if you want encription and you have a paid plan.
 
 If pdflayer response with an error the Promise will be rejected with the error code, name and message returned from the API.
 
