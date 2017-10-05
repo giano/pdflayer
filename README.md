@@ -19,33 +19,32 @@ require('any-promise/register/bluebird'); //Registering Bluebird as my preferred
 const PdfLayer = require('pdflayer');
 const pdfLayer = new PdfLayer({
     access_key: process.env.PDFLAYER_KEY,
-    test: 1
+    test: 1,
+	rate_limit: 2
 });
 const express = require('express');
 const app = express();
 // 
 app.get('/raw-html.pdf', function(req, res) {
+	// This will generate a responsed promise, with a stream you can pipe out.
     pdfLayer.generate('<div>This Is A Raw Html... and Hello World!</div>', {
         page_size: 'A3' //This is an option object. Follow https://pdflayer.com/documentation for more infos.
     }).then(function(pdfResponse) {
         // You can stream the response to an html res object like this;
         pdfResponse.stream.pipe(res);
-        // you find other infos in response like pdfResponse.headers, pdfResponse.fileName, pdfResponse.size
+        // you find other infos in response like pdfResponse.url (you can redirect to this, but it would be more efficient to use the following 'getUrl' sync function), pdfResponse.headers, pdfResponse.fileName, pdfResponse.size
     }).catch(function(err) {
         console.log('Something gone very wrong: ' + err.message);
     });
 });
 
 app.get('/url-link.pdf', function(req, res) {
-    pdfLayer.generate('https://github.com/giano/pdflayer/blob/master/README.md', {
-        method: 'GET',
-    }).then(function(pdfResponse) {
-        // You can also redirect to the response url if you did'nt passed some POST specific params (like raw html, header_html and footer_html)
-        res.redirect(pdfResponse.url);
-        // you find other infos in response like pdfResponse.headers, pdfResponse.fileName, pdfResponse.size
-    }).catch(function(err) {
-        console.log('Something gone very wrong: ' + err.message);
-    });
+	try{
+		// You can also redirect to the response url if you didn't passed some POST specific params (like raw html, header_html and footer_html). SYNC operation. Attention: will espose your raw PDFLayer url.
+		res.redirect(pdfLayer.getUrl('https://github.com/giano/pdflayer/blob/master/README.md'));
+	}catch(err){
+		console.log('Something gone very wrong: ' + err.message);
+	}
 });
 
 app.listen(3000);
