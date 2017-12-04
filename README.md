@@ -1,5 +1,7 @@
 # Pdflayer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/giano/pdflayer.svg)](https://greenkeeper.io/)
+
 Any-Promise oriented Wrapper for [pdflayer](https://pdflayer.com) API
 
 ### Installing
